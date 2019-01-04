@@ -124,10 +124,10 @@ scripts/kcadm.sh update realms/$REALM \
 
 sleep 3
 
-echo "Creating realm role airfreight..."
+echo "Creating realm role common..."
 scripts/kcadm.sh create roles \
 -r $REALM \
--s name=airfreight \
+-s name=common \
 --server $KEYCLOAK_SERVER \
 --realm=master \
 --user $KEYCLOAK_USER \
@@ -135,76 +135,10 @@ scripts/kcadm.sh create roles \
 
 sleep 2
 
-echo "Creating realm role fastparcels..."
+echo "Creating realm role admins..."
 scripts/kcadm.sh create roles \
 -r $REALM \
--s name=fastparcels \
---server $KEYCLOAK_SERVER \
---realm=master \
---user $KEYCLOAK_USER \
---password $KEYCLOAK_PASSWORD
-
-sleep 2
-
-echo "Creating realm role roro..."
-scripts/kcadm.sh create roles \
--r $REALM \
--s name=roro \
---server $KEYCLOAK_SERVER \
---realm=master \
---user $KEYCLOAK_USER \
---password $KEYCLOAK_PASSWORD
-
-sleep 2
-
-echo "Creating realm role risk..."
-scripts/kcadm.sh create roles \
--r $REALM \
--s name=risk \
---server $KEYCLOAK_SERVER \
---realm=master \
---user $KEYCLOAK_USER \
---password $KEYCLOAK_PASSWORD
-
-sleep 2
-
-echo "Creating realm role riskreviewer..."
-scripts/kcadm.sh create roles \
--r $REALM \
--s name=riskreviwer \
---server $KEYCLOAK_SERVER \
---realm=master \
---user $KEYCLOAK_USER \
---password $KEYCLOAK_PASSWORD
-
-sleep 2
-
-echo "Creating realm role riskauthoriser..."
-scripts/kcadm.sh create roles \
--r $REALM \
--s name=riskauthoriser \
---server $KEYCLOAK_SERVER \
---realm=master \
---user $KEYCLOAK_USER \
---password $KEYCLOAK_PASSWORD
-
-sleep 2
-
-echo "Creating realm role idamadmin..."
-scripts/kcadm.sh create roles \
--r $REALM \
--s name=idamadmin \
---server $KEYCLOAK_SERVER \
---realm=master \
---user $KEYCLOAK_USER \
---password $KEYCLOAK_PASSWORD
-
-sleep 2
-
-echo "Creating realm role service..."
-scripts/kcadm.sh create roles \
--r $REALM \
--s name=service \
+-s name=admins \
 --server $KEYCLOAK_SERVER \
 --realm=master \
 --user $KEYCLOAK_USER \
